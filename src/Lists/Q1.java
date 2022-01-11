@@ -3,6 +3,7 @@ package Lists;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.ListIterator;
 import java.util.stream.Collectors;
 
 public class Q1 {
@@ -35,21 +36,24 @@ public class Q1 {
      list1.add("Omer");
      list1.add("ahmet");
 //     
-//     for(int i=0; i<list1.size();i++)
-//     {
-//    	 if(list1.get(i).contains("a"))
-//    	 {
-//    		 list1.remove(i);
-//    	 }
-//     }
-   
+//   
+     ListIterator listItr1= list1.listIterator();
      
-     System.out.println(list1);
+  
 
+    while(listItr1.hasNext()) {
+    	  String str=(String)listItr1.next();
+    	  if(str.contains("a"))
+    	  {
+    		  listItr1.remove();
+    	  }
+    }
+	
+    System.out.println(list1);
     
-     List<String> list2= list1.stream().filter(t->!t.contains("a")).collect(Collectors.toList());
+   ////  List<String> list2= list1.stream().filter(t->!t.contains("a")).collect(Collectors.toList());
      
-     System.out.println(list2);
+    // System.out.println(list2);
      
      
  
