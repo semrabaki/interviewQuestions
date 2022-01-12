@@ -1,6 +1,8 @@
 package Lists;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class Q2 {
@@ -35,6 +37,10 @@ public class Q2 {
 			}
 		}
 		
+//		list2.sort(null);
+		
+		
+		list2.stream().sorted(Comparator.reverseOrder());
       System.out.println(list);
       System.out.println(list2);
 	}

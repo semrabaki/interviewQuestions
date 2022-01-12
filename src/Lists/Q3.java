@@ -27,10 +27,21 @@ public class Q3 {
 			 
 		 }
 		 
+		 int sum=0;
+		 for(Integer w: list1)
+		 {
+			 sum= sum+(w*w);
+		 }
+		 
+		 
 		 System.out.println(list1);
 		 
-		 list1.stream().map(Utils::getSquare).forEach(Utils::printInTheSameLineWithSpace);
-
+		 System.out.println(sum);
+		 
+		int result= list1.stream().map(Utils::getSquare).reduce(0, Math::addExact);
+   
+		
+		System.out.println("result from functional programming:" +result);
 	}
 
 }
