@@ -28,7 +28,7 @@ public class Q4D {
 		
 		list1.stream().filter(t->t%2==1).forEach(t->System.out.print(t+" "));
 
-		System.out.println("Odd elements : "+ list1);
+		
 		
 	}
 

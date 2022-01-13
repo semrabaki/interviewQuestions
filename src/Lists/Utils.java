@@ -1,5 +1,7 @@
 package Lists;
 
+import java.util.List;
+
 public class Utils {
 
 	
@@ -45,6 +47,20 @@ public class Utils {
 				x=x/10;
 			}
 			return sum;
+		}
+		
+		public static int getAvarageScore(List<Integer> list){
+			int sum=0;
+			for(int w: list)
+			{
+				sum+=w;
+			}
+			
+			int avg=0;
+			avg=sum/list.size();
+			
+			return avg;
+			
 		}
 
 	
